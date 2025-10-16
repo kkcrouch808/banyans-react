@@ -1,0 +1,545 @@
+/* Header Styles */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Responsive Logo */
+.logo-responsive {
+    max-width: 220px;
+    height: auto;
+}
+
+/* Custom Navbar Toggler */
+.navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Nav Styles - Override Bootstrap nav link color to black */
+.nav {
+    --bs-nav-link-color: black;
+}
+
+/* Navigation Link Hover Effects */
+.nav-link {
+    color: black !important;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #637eec !important;
+}
+
+/* Social Icon Hover Effects */
+.social-icon {
+    color: black !important;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    margin: 0 0.75rem;
+}
+
+.social-icon:hover {
+    color: #3b93ff !important;
+}
+
+/* Language Dropdown Hover */
+.dropdown-toggle {
+    color: black !important;
+    transition: color 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+    color: #637eec !important;
+}
+
+/* Responsive Navbar Adjustments */
+@media (max-width: 991.98px) {
+    .logo-responsive {
+        max-width: 180px;
+    }
+    
+    .navbar-collapse {
+        margin-top: 1rem;
+        text-align: left;
+    }
+    
+    /* Make navbar items horizontal and left-aligned */
+    .navbar-nav {
+        flex-direction: row !important;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        text-align: left;
+    }
+    
+    .navbar-nav .nav-item {
+        margin: 0 1rem 0.5rem 0;
+    }
+    
+    /* Main navigation items */
+    .navbar-nav.mx-auto {
+        margin-right: 0 !important;
+        margin-bottom: 0.5rem !important;
+        justify-content: flex-start;
+    }
+    
+    /* Social icons and language dropdown */
+    .navbar-nav:last-child {
+        flex-direction: row !important;
+        justify-content: flex-start;
+        margin-top: 0;
+        flex-wrap: wrap;
+    }
+    
+    .navbar-nav:last-child .nav-item {
+        margin: 0 1rem 0.5rem 0;
+    }
+    
+    .social-icon {
+        display: inline-block;
+        margin: 0;
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-responsive {
+        max-width: 150px;
+    }
+    
+    .container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+
+/* Logo Styles */
+.logo-img {
+    height: 60px;
+    width: auto;
+}
+
+/* Navigation Styles */
+.nav-link {
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+.nav-link:hover {
+    color: #637eec !important;
+}
+
+/* Social Media Icons */
+.social-icon {
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+}
+
+.social-icon:hover {
+    color: #3b93ff !important;
+}
+
+/* Language Dropdown */
+.dropdown-toggle::after {
+    margin-left: 0.5em;
+}
+
+.dropdown-toggle:focus {
+    box-shadow: none;
+}
+
+.dropdown-toggle {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+/* Desktop navbar spacing */
+@media (min-width: 992px) {
+    .navbar-nav .nav-item {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    
+    .navbar-nav:last-child .nav-item {
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+    }
+}
+
+/* Language dropdown spacing */
+.navbar-nav:last-child .nav-item:last-child {
+    margin-left: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+    .logo-img {
+        height: 50px;
+    }
+    
+    .navbar-nav {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .social-icon {
+        margin-right: 1rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-fluid {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+
+/* Hero Section Styles */
+.hero-section {
+    height: 70vh;
+    background-image: url('/img/wod-banyans-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+    position: relative;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1c1c1c;
+    color: #fafafa;
+    padding: 1.5rem 0;
+    margin: 0;
+}
+
+footer .container {
+    max-width: 1200px;
+}
+
+footer .row {
+    align-items: flex-start;
+}
+
+footer .col {
+    padding: 0 0.8rem;
+}
+
+footer .col:first-child {
+    padding-left: 0;
+    flex: 0 0 18%;
+}
+
+footer .col:nth-child(3) { /* Business Hours */
+    flex: 0 0 45%;
+    padding: 0 1.2rem;
+}
+
+footer .col:last-child { /* Subscribe */
+    padding-right: 0;
+    flex: 0 0 18%;
+}
+
+footer h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    color: #fafafa;
+    letter-spacing: 0.1em;
+}
+
+/* Location section styling */
+footer .col:first-child {
+    line-height: 1.2;
+}
+
+footer .col:first-child strong {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.15rem;
+}
+
+/* Business Hours specific styling */
+footer .col:nth-child(3) .row {
+    margin: 0;
+}
+
+footer .col:nth-child(3) .col-6 {
+    padding: 0 0.5rem 0 0;
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+
+footer .col:nth-child(3) .col-6:last-child {
+    padding: 0 0 0 0.5rem;
+}
+
+footer .col:nth-child(3) strong {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.1rem;
+}
+
+/* Consistent spacing for all footer text */
+footer {
+    line-height: 1.2;
+}
+
+footer br {
+    line-height: 1.2;
+}
+
+/* Subscribe form styling */
+footer .form-control {
+    background-color: white;
+    border: 1px solid #ddd;
+    color: #666;
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+    padding: 0.5rem 0.6rem;
+    border-radius: 3px;
+    width: 100%;
+}
+
+footer .form-control::placeholder {
+    color: #999;
+    font-size: 0.8rem;
+}
+
+footer .form-control:focus {
+    background-color: white;
+    border-color: #ccc;
+    color: #666;
+    box-shadow: 0 0 0 0.2rem rgba(200, 200, 200, 0.25);
+}
+
+footer .btn-primary {
+    background-color: #fafafa;
+    border-color: #fafafa;
+    color: #1c1c1c;
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 3px;
+    width: auto;
+    min-width: 80px;
+}
+
+footer .btn-primary:hover {
+    background-color: #e0e0e0;
+    border-color: #e0e0e0;
+    color: #1c1c1c;
+}
+
+/* Business Hours styling */
+footer .row .col-6 {
+    padding: 0 0.75rem;
+}
+
+footer .row .col-6:first-child {
+    padding-left: 0;
+}
+
+footer .row .col-6:last-child {
+    padding-right: 0;
+}
+
+/* Footer Responsive Styles */
+@media (max-width: 991.98px) {
+    footer {
+        position: relative;
+        margin-top: 2rem;
+        padding: 1.5rem 0;
+    }
+    
+    /* Remove body padding since footer is no longer fixed */
+    body {
+        padding-bottom: 0;
+    }
+    
+    /* Responsive footer layout */
+    footer .container {
+        padding: 0 1rem;
+    }
+    
+    footer .row {
+        margin: 0;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    
+    footer .col {
+        padding: 0 0.75rem;
+        margin-bottom: 1.5rem;
+        flex: 1;
+        min-width: 0;
+        flex-shrink: 1;
+    }
+    
+    /* Hide empty columns on smaller screens */
+    footer .col:empty {
+        display: none;
+    }
+    
+    /* Specific sizing for footer columns on mobile */
+    footer .col:nth-child(1) { /* Location */
+        flex: 0 0 30%;
+        min-width: 200px;
+    }
+    
+    footer .col:nth-child(3) { /* Business Hours */
+        flex: 0 0 40%;
+        min-width: 220px;
+    }
+    
+    footer .col:nth-child(5) { /* Subscribe */
+        flex: 0 0 30%;
+        min-width: 180px;
+    }
+    
+    footer h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    footer .form-control {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    footer .btn-primary {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.75rem;
+    }
+}
+
+/* Very small screens - allow stacking if absolutely necessary */
+@media (max-width: 576px) {
+    footer .row {
+        flex-wrap: wrap;
+    }
+    
+    footer .col {
+        flex: 1 1 100%;
+        min-width: 0;
+        margin-bottom: 1rem;
+    }
+    
+    footer .col:nth-child(1),
+    footer .col:nth-child(3),
+    footer .col:nth-child(5) {
+        flex: 1 1 100%;
+    }
+}
+
+/* Ensure body uses flex for footer positioning */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.6rem;
+    }
+    
+    .hero-text {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .hero-text {
+        font-size: 1rem;
+    }
+    
+    .hero-content {
+        padding: 0 1rem;
+    }
+}
